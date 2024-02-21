@@ -1,6 +1,4 @@
-# Your Project Name
-
-JS Practice
+# JS Practice
 
 ## Description
 
