@@ -52,17 +52,17 @@ export const transformData = (orders: Order[], filters: OrdersFilters | null = n
     );
   }
 
-  if (filters.minAmount) {
+  if (filters?.minAmount) {
     updatedOrders = updatedOrders.filter(
-      (order) => order.amount >= filters.minAmount
+      (order) => order.amount >= filters.minAmount!
     );
   }
 
-  if (filters.fruits) {
+  if (filters?.fruits) {
     const filtered: Order[] = [];
 
     updatedOrders.forEach((order) => {
-      const merged = [...order.fruits, ...filters.fruits];
+      const merged = [...order.fruits, ...filters.fruits!];
       const mergedUnique = Array.from(new Set(merged));
 
       if (merged.length !== mergedUnique.length) {
